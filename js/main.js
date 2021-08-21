@@ -3,6 +3,21 @@ $(document).ready(function () {
     let floorPath = $(".home-image path");
     let counterUp = $(".counter-up");
     let counterDown = $(".counter-down");
+    let modal = $(".modal");
+    let modalCloseButton = $(".modal-close-button");
+    let viewFlatsButton = $(".view-flats");
+
+    floorPath.on("click", function () {
+        modal.toggleClass("is-open");
+    })
+
+    viewFlatsButton.on("click", function () {
+        modal.toggleClass("is-open");
+    })
+
+    modalCloseButton.on("click", function () {
+        modal.removeClass("is-open");
+    })
 
     floorPath.on("mouseover", function () {
         floorPath.removeClass("current-floor");
